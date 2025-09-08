@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faltômetro - Cadastro</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Título da seção -->
+        <h1 class="section-title">Cadastro</h1>
+        
+        <!-- Formulário de Cadastro -->
+        <form class="form-container" id="cadastroForm">
+            <!-- Campo Nome Completo -->
+            <div class="form-group">
+                <label for="nomeCompleto" class="form-label">Nome Completo</label>
+                <input 
+                    type="text" 
+                    id="nomeCompleto" 
+                    name="nomeCompleto" 
+                    class="form-input" 
+                    placeholder="Nome Completo"
+                    required
+                >
+            </div>
+            
+            <!-- Campo Matrícula -->
+            <div class="form-group">
+                <label for="matricula" class="form-label">Matrícula</label>
+                <input 
+                    type="text" 
+                    id="matricula" 
+                    name="matricula" 
+                    class="form-input" 
+                    placeholder="Digite sua matricula"
+                    required
+                >
+            </div>
+            
+            <!-- Campo Email -->
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="Email Institucional"
+                    required
+                >
+            </div>
+            
+            <!-- Campo Senha -->
+            <div class="form-group">
+                <label for="senha" class="form-label">Senha</label>
+                <input 
+                    type="password" 
+                    id="senha" 
+                    name="senha" 
+                    class="form-input" 
+                    placeholder="Digite sua senha"
+                    required
+                >
+            </div>
+            
+            <!-- Seleção de Tipo de Usuário -->
+            <div class="form-group">
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input 
+                            type="radio" 
+                            id="aluno" 
+                            name="tipoUsuario" 
+                            value="aluno" 
+                            class="radio-input"
+                            required
+                        >
+                        <label for="aluno" class="radio-label">Aluno</label>
+                    </div>
+                    <div class="radio-item">
+                        <input 
+                            type="radio" 
+                            id="professor" 
+                            name="tipoUsuario" 
+                            value="professor" 
+                            class="radio-input"
+                            required
+                        >
+                        <label for="professor" class="radio-label">Professor</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botão de Cadastro -->
+            <button type="submit" class="btn-primary">Cadastrar</button>
+        </form>
+        
+        <!-- Link para voltar ao login -->
+        <div class="links-container">
+            <a href="/html/index.html" class="nav-link">← Voltar ao Login</a>
+        </div>
+        
+        <!-- Área para mensagens -->
+        <div id="messageArea"></div>
+    </div>
+    
+    <script src="/js/cadastro.js"></script>
+</body>
+</html>
