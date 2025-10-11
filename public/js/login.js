@@ -69,9 +69,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     localStorage.setItem('authToken', data.token);
                 }
                 
-                // Redirecionar após 1 segundos (aqui você redirecionaria para o dashboard)
+                // Salvar dados do usuário no localStorage
+                if (data.data) {
+                    localStorage.setItem('userData', JSON.stringify(data.data));
+                }
+                
+                // Redirecionar baseado no tipo de usuário
                 setTimeout(() => {
-                    window.location.href = '/html/aluno.html'; // Tela de aluno com o quadro de faltas
+                    if (data.data && data.data.tipoUsuario === 'professor') {
+                        window.location.href = '/html/professor.html'; // Tela de professor
+                    } else {
+                        window.location.href = '/html/aluno.html'; // Tela de aluno
+                    }
                 }, 1000);
                 
             } else {
