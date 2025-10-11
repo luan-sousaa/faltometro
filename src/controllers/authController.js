@@ -475,6 +475,11 @@ const getProfile = async (req, res) => {
     }
 };
 
+// Função para debug (apenas desenvolvimento)
+const getUsers = () => {
+    return users;
+};
+
 module.exports = {
     register,
     login,
@@ -482,5 +487,6 @@ module.exports = {
     resetPassword,
     verifyToken,
     logout,
-    getProfile
+    getProfile,
+    getUsers
 };

@@ -9,7 +9,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middlewares de segurança
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: false,
+  crossOriginEmbedderPolicy: false
+}));
 app.use(cors());
 
 // Rate limiting
@@ -35,6 +38,36 @@ app.use('/api/auth', authRoutes);
 // Rota principal - redireciona para o login
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'html', 'index.html'));
+});
+
+// Rota de debug
+app.get('/debug', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Servidor funcionando!',
+    paths: {
+      html: path.join(__dirname, '..', 'public', 'html', 'index.html'),
+      css: path.join(__dirname, '..', 'public', 'css', 'style.css'),
+      js: path.join(__dirname, '..', 'public', 'js', 'login.js')
+    }
+  });
+});
+
+// Rota para ver usuários (apenas desenvolvimento)
+app.get('/debug/users', (req, res) => {
+  const authController = require('./controllers/authController');
+  res.json({
+    success: true,
+    message: 'Lista de usuários cadastrados',
+    totalUsers: authController.getUsers ? authController.getUsers().length : 0,
+    users: authController.getUsers ? authController.getUsers().map(user => ({
+      id: user.id,
+      nome: user.nomeCompleto,
+      email: user.email,
+      matricula: user.matricula,
+      tipo: user.tipoUsuario
+    })) : []
+  });
 });
 
 // Middleware de tratamento de erros
