@@ -69,11 +69,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     localStorage.setItem('authToken', data.token);
                 }
                 
-                // Redirecionar após 2 segundos (aqui você redirecionaria para o dashboard)
+                // Redirecionar após 1 segundos (aqui você redirecionaria para o dashboard)
                 setTimeout(() => {
-                    // Como não temos dashboard ainda, vamos apenas mostrar uma mensagem
-                    showMessage('Dashboard não implementado ainda. Login foi realizado com sucesso!', 'success');
-                }, 2000);
+                    window.location.href = '/html/aluno.html'; // Tela de aluno com o quadro de faltas
+                }, 1000);
                 
             } else {
                 showMessage(data.message || 'Erro ao realizar login. Verifique suas credenciais.', 'error');

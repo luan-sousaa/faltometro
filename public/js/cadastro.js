@@ -110,10 +110,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Limpar formulário
                 cadastroForm.reset();
                 
-                // Redirecionar para login após 3 segundos
+                // Redirecionar para login após 1 segundos
                 setTimeout(() => {
                     window.location.href = '/html/index.html';
-                }, 3000);
+                }, 1000);
                 
             } else {
                 // Tratar diferentes tipos de erro
