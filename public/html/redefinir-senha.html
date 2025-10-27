@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faltômetro - Redefinir Senha</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Título da seção -->
+        <h1 class="section-title">Redefinir Senha</h1>
+        
+        <!-- Passo 1: Solicitar Email (visível por padrão) -->
+        <div id="step1Container">
+            <!-- Texto explicativo -->
+            <p class="description-text">Insira o seu email de recuperação para redefinir sua senha</p>
+            
+            <!-- Formulário de Solicitação -->
+            <form class="form-container" id="forgotPasswordForm">
+                <!-- Campo Email de Recuperação -->
+                <div class="form-group">
+                    <label for="emailRecuperacao" class="form-label">Email de recuperação</label>
+                    <input 
+                        type="email" 
+                        id="emailRecuperacao" 
+                        name="emailRecuperacao" 
+                        class="form-input" 
+                        placeholder="Email de recuperação"
+                        required
+                    >
+                </div>
+                
+                <!-- Botão de Envio -->
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+        </div>
+        
+        <!-- Passo 2: Redefinir Senha (oculto por padrão) -->
+        <div id="step2Container" style="display: none;">
+            <!-- Texto explicativo -->
+            <p class="description-text">Digite sua nova senha</p>
+            
+            <!-- Formulário de Redefinição -->
+            <form class="form-container" id="resetPasswordForm">
+                <!-- Campo Nova Senha -->
+                <div class="form-group">
+                    <label for="novaSenha" class="form-label">Nova Senha</label>
+                    <input 
+                        type="password" 
+                        id="novaSenha" 
+                        name="novaSenha" 
+                        class="form-input" 
+                        placeholder="Senha"
+                        required
+                    >
+                </div>
+                
+                <!-- Campo Confirmar Senha -->
+                <div class="form-group">
+                    <label for="confirmarSenha" class="form-label">Confirme sua nova senha</label>
+                    <input 
+                        type="password" 
+                        id="confirmarSenha" 
+                        name="confirmarSenha" 
+                        class="form-input" 
+                        placeholder="Senha"
+                        required
+                    >
+                </div>
+                
+                <!-- Botão de Envio -->
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+        </div>
+        
+        <!-- Link para voltar ao login -->
+        <div class="links-container">
+            <a href="/html/index.html" class="nav-link">← Voltar ao Login</a>
+        </div>
+        
+        <!-- Área para mensagens -->
+        <div id="messageArea"></div>
+    </div>
+    
+    <script src="/js/redefinir-senha.js"></script>
+</body>
+</html>

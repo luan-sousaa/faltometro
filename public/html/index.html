@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faltômetro - Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Título principal -->
+        <h1 class="main-title">FALTÔMETRO</h1>
+        
+        <!-- Subtítulo -->
+        <p class="subtitle">O site que te livra da reprovação</p>
+        
+        <!-- Formulário de Login -->
+        <form class="form-container" id="loginForm">
+            <!-- Campo Email -->
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="Email Institucional/Matrícula"
+                    required
+                >
+            </div>
+            
+            <!-- Campo Senha -->
+            <div class="form-group">
+                <label for="password" class="form-label">Senha</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    class="form-input" 
+                    placeholder="Digite sua senha"
+                    required
+                >
+            </div>
+            
+            <!-- Botão de Login -->
+            <button type="submit" class="btn-primary">Login</button>
+        </form>
+        
+        <!-- Links de navegação -->
+        <div class="links-container">
+            <a href="/html/cadastro.html" class="nav-link">Cadastrar-se</a>
+            <a href="/html/redefinir-senha.html" class="nav-link">Esqueceu a senha?</a>
+        </div>
+        
+        <!-- Área para mensagens -->
+        <div id="messageArea"></div>
+    </div>
+    
+    <script src="/js/login.js"></script>
+</body>
+</html>

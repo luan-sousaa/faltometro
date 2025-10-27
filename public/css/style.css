@@ -1,0 +1,289 @@
+/* Importar fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Reset CSS básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configuração global */
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-color: #FFFBF6;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+/* Container principal centralizado */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Títulos principais */
+.main-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Subtítulo */
+.subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+/* Títulos de seção (Cadastro, Redefinir Senha) */
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* Texto descritivo */
+.description-text {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+/* Formulários */
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Grupos de campos */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Labels dos campos */
+.form-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* Campos de input */
+.form-input {
+  width: 100%;
+  height: 50px;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.form-input::placeholder {
+  color: #AAAAAA;
+  font-weight: 400;
+}
+
+/* Botões principais */
+.btn-primary {
+  width: 100%;
+  height: 50px;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container de links */
+.links-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Links de navegação */
+.nav-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+/* Grupos de radio buttons */
+.radio-group {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Estilização customizada para radio buttons (quadrados) */
+.radio-input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #AAAAAA;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.radio-input:checked {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.radio-input:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.radio-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Mensagens de feedback */
+.message {
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.message.info {
+  background-color: #cce7ff;
+  color: #0c5460;
+  border: 1px solid #b8d4ff;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .main-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+  
+  .main-title,
+  .section-title {
+    font-size: 36px;
+  }
+  
+  .subtitle,
+  .description-text {
+    font-size: 14px;
+  }
+  
+  .form-input,
+  .btn-primary {
+    height: 45px;
+    font-size: 14px;
+  }
+  
+  .nav-link {
+    font-size: 12px;
+  }
+  
+  .radio-group {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .main-title,
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}

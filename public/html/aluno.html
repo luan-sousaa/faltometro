@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Espaço - Aluno</title>
+    <link rel="stylesheet" href="/css/stylealuno.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="topbar">
+        <div class="notificacoes">
+          <i class="fa-solid fa-message"></i>
+        </div>
+        <div class="perfil">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+
+      <p class="welcome">Seja bem-vindo, <span id="nome_aluno"></span></p>
+
+      <div class="infos">
+        <div>R.A:<span id="ra"></span></div>
+        <div>Curso:<span id="curso"></span></div>
+        <div>Período: <span id="periodo">1° Período</span></div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Matéria</th>
+            <th>Carga Horária</th>
+            <th>Faltas</th>
+          </tr>
+        </thead>
+
+        <tbody id="tabela-disciplinas"></tbody>
+      </table>
+      <div class="legenda">
+        <span><span class="dot verde"></span> Ótima</span>
+        <span><span class="dot amarelo"></span> Ok</span>
+        <span><span class="dot laranja"></span> Preocupante</span>
+        <span><span class="dot vermelho"></span> Crítica</span>
+      </div>
+    </div>
+  </body>
+  <script src="../js/aluno.js"></script>
+</html>
